@@ -1,0 +1,10 @@
+cd sbuild_debuild_example
+tar -czvf debhello-1.0.0.tar.gz debhello-1.0.0/
+cd debhello-1.0.0/
+debmake
+vim debian/rules(在规则dh $@下添加一行：override_dh_usrlocal:)
+debuild -us -uc
+
+
+
+
