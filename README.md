@@ -1,4 +1,4 @@
-# Usage：  
+## 公共部分：  
 
 * 克隆仓库代码
   ```
@@ -22,7 +22,8 @@
   override_dh_usrlocal:
   ```
 
-##  使用debuild
+##  使用debuild的方式(接公共部分)
+
 * 编辑控制文件debian/changelog，将第一行中的UNRELEASE修改为对应的发行版名称，ubuntu16.04为xenial。  
 
 * 键入指令
@@ -30,7 +31,7 @@
   debuild -us -uc
   ```
 
-## 使用sbuild
+## 使用sbuild的方式(接公共部分)
 * 根据博客中内容创建纯净编译系统,这里创建一个ubuntu16.04的系统
   ```
   sudo sbuild-createchroot --include=eatmydata,ccache,gnupg xenial /srv/chroot/xenial-amd64-sbuild http://security.ubuntu.com/ubuntu  
